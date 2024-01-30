@@ -1,0 +1,134 @@
+#header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--bege);
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  background-color: var(--bege-3);
+}
+.flex-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#menu {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+#menu a {
+  display: block;
+  transition: color 0.3s;
+}
+#menu li:hover {
+  color: var(--rosa);
+}
+#menu li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#btn-mobile {
+  display: none;
+}
+.menu-active {
+  overflow: hidden;
+}
+
+.menu-active::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.contato-header {
+  display: none;
+}
+@media (max-width: 960px) {
+  #btn-mobile {
+    display: block;
+  }
+  #header .botao {
+    display: none;
+  }
+  .contato-header {
+    display: block;
+  }
+  #menu {
+    display: block;
+    position: absolute;
+    width: 60%;
+    top: 0px;
+    right: 0px;
+    text-align: right;
+    background-color: #e7e7e7;
+    height: 0px;
+    transition: 0.5s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+    background-color: var(--bege-3);
+    border-left: 2px solid var(--bege);
+  }
+  #menu li {
+    text-align: left;
+    margin-bottom: 40px;
+    padding-left: 40px;
+  }
+  #menu li:first-child {
+    margin-top: 140px;
+  }
+
+  #nav.active #menu {
+    height: 100vh;
+    visibility: visible;
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 4px 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 10px;
+  }
+  #hamburguer {
+    border-top: 4px solid var(--escuro);
+  }
+  #hamburguer::after,
+  #hamburguer::before {
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-color: var(--escuro);
+    display: block;
+    transition: 0.3s;
+    margin-top: 4px;
+    position: relative;
+  }
+  #nav.active #hamburguer {
+    display: block;
+    border-top: 4px solid var(--escuro);
+    width: 30px;
+    z-index: 9999;
+  }
+  #nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -8px;
+  }
+}
+@media (max-width: 300px) {
+  #logo {
+    max-width: 40vw;
+  }
+}

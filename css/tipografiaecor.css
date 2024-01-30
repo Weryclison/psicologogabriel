@@ -1,0 +1,65 @@
+.font-1-a {
+  font-family: "DM Serif Text";
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 110%;
+}
+.font-1-b {
+  font-family: "DM Serif Text";
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 110%;
+}
+.font-2-a {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 110%;
+}
+.font-2-b {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 170%;
+}
+
+@media (max-width: 750px) {
+  .font-1-a {
+    font-size: 2rem;
+  }
+  .font-1-b {
+    font-size: 2rem;
+  }
+}
+
+:root {
+  --escuro: #1a030b;
+  --rosa: #d99cab;
+  --rosa-1: #e6a4b4;
+  --rosa-2: #f7c1ce;
+  --bege: #ebe0d3;
+  --rosa-3: #fcd7e0;
+  --bege-2: #faf6f2;
+  --bege-3: #fcfaf7;
+}
+.escuro {
+  color: var(--escuro);
+}
+.rosa {
+  color: var(--rosa);
+}
+.rosa-1 {
+  color: var(--rosa-1);
+}
+.rosa-3 {
+  color: var(--rosa-3);
+}
+.bege {
+  color: var(--bege);
+}
+.bege-2 {
+  color: var(--bege-2);
+}
+.bege-3 {
+  color: var(--bege-3);
+}

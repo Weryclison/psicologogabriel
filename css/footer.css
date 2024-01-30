@@ -1,0 +1,27 @@
+.rodape {
+  background-color: var(--bege-2);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.rodape .container {
+  display: flex;
+  justify-content: space-between;
+}
+.rodape-redes {
+  display: flex;
+  gap: 30px;
+}
+.rodape-reservados {
+  text-align: center;
+}
+@media (max-width: 850px) {
+  .rodape .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px;
+  }
+  .rodape-reservados {
+    order: 3;
+  }
+}

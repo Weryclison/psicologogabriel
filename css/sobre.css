@@ -1,0 +1,23 @@
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 80px;
+  gap: 120px;
+  margin-bottom: 60px;
+}
+.sobre h2 {
+  margin-bottom: 20px;
+}
+.sobre p {
+  margin-bottom: 20px;
+}
+@media (max-width: 950px) {
+  .sobre {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+    gap: 40px;
+  }
+  .sobre-imagem {
+    order: 2;
+  }
+}
